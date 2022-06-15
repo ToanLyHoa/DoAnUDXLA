@@ -318,11 +318,11 @@ def main():
     out.release()
 
 
-    # vid = mpy.ImageSequenceClip([x[:, :, ::-1] for x in vis_frames], fps=24)
-    # vid.write_videofile(args.out_filename, remove_temp=True)
+    vid = mpy.ImageSequenceClip([x[:, :, ::-1] for x in vis_frames], fps=24)
+    vid.write_videofile(args.out_filename, remove_temp=True)
 
-    # tmp_frame_dir = osp.dirname(frame_paths[0])
-    # shutil.rmtree(tmp_frame_dir)
+    tmp_frame_dir = osp.dirname(frame_paths[0])
+    shutil.rmtree(tmp_frame_dir)
 
 
 if __name__ == '__main__':
